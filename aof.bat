@@ -25,12 +25,9 @@ BSwap.exe d B c1c2 oddeven.txt 044-c1.c1 044-c2.c2
 copy /b crom2+crom4 c3c4
 BSwap.exe d B c3c4 oddeven.txt 044-c3.c3 044-c4.c4
 
-
 REM delete
 del crom1,crom2,crom3,crom4
 del c1c2,c3c4
 
 REM compress
 powershell Compress-Archive 044*.* -Force -DestinationPath aof.zip
-
-copy aof.zip romcenter
